@@ -1,0 +1,1 @@
+"use strict";var extnDiv=document.createElement("div");extnDiv.setAttribute("id","__vt_extn_gmail");document.getElementsByTagName("body")[0].appendChild(extnDiv);

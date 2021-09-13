@@ -1,0 +1,1323 @@
+    /*!
+ * Copyright (C) www.vtiger.com. All rights reserved.
+ * Vtiger Commercial License. Reverse engineering restricted.
+ */
+* {
+    font-family: SF UI Text Regular;
+}
+#vtigerwidget {
+    margin : 0px !important;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #F7F7F7;
+    padding: 0px 15px !important;
+    background-color: #F7F7F7;
+    height: 95%;
+}
+.p-0 {
+    padding: 0 !important;
+}
+.floatRight {
+    float: right !important;
+}
+.floatLeft {
+    float: left !important;
+}
+.slimScrollBar,
+.slimScrollRail {
+    display : none !important;
+}
+#mainView img{
+    width: 100%;
+    height:auto;
+}
+#mainView button {
+    font-size: 16px;
+}
+.apply-bootstrap .vtHeader {
+    margin-top: 0px;
+    padding: 8px 0px;
+    vertical-align: middle;
+    font-size: .8em;
+}
+.apply-bootstrap .vtHeader .user-display-name {
+    max-width: 135px;
+    margin-top: 1px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0.9em;
+}
+.apply-bootstrap .vtHeader .user-display-organizationName a {
+    text-decoration: none !important;
+}
+.apply-bootstrap .vtHeader .user-display-name a {
+    text-decoration: none !important;
+}
+.apply-bootstrap .vtHeader p {
+    font-size: 1em;
+    padding-top: 0px;
+    margin: 0px !important;
+    font-weight: 600;
+    color: rgb(92, 80, 80);
+}
+.apply-bootstrap .vtHeader .logout {
+    margin-right: 4px;
+    margin-top: 1px;
+}
+.apply-bootstrap .vtFooter {
+    margin-left: -1px;
+    top: 10px;
+    position: relative;
+    background: white;
+}
+.apply-bootstrap .noprint {
+    position: fixed;
+    z-index: 1001;
+    width: 99.5%;
+    bottom : 0px;
+    margin-top: -1px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: white;
+    height: 32px;
+    background: #F7F7F7;
+}
+.apply-bootstrap .vtigercopyright {
+    font-size: .7em;
+    text-align: center;
+    color: rgb(102, 86, 86);
+    padding: 4px 0px;
+    margin-bottom : 0px;
+}
+.vtigerlogo {
+    margin:10%  auto;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+}
+.apply-bootstrap .center-block{
+    text-align: center;
+}
+.signupdetails {
+    margin-top: 5%;
+    font-size: 0.8em;
+    text-align: center;
+}
+.contact-header {
+    padding: 10px 15px;
+    margin: 0px -15px;
+    z-index: 2;
+    position: relative;
+    background-color: white;
+}
+.contact-header > div{
+    float: left;
+}
+.contact-header .header-text {
+    margin-top: 7px;
+    margin-left: 6px;
+    width: 80%
+}
+.contact-header .details{
+    width: 84%;
+}
+.contact-header .header-text .fa-link{
+    cursor: pointer;
+}
+.createviewwrapper,
+.summaryviewwrapper{
+    max-height: 80% !important;
+    overflow: auto;
+    background: white;
+    margin: 10px -15px;
+    padding: 15px;
+}
+.createviewwrapper {
+    padding: 0px !important;
+}
+.createformcontainer {
+    padding: 15px !important;
+}
+.summaryviewwrapper {
+    padding-top: 0px !important;
+    min-height: 100%;
+}
+.wgt-form-group {
+    margin-bottom: 15px;
+}
+.wgt-form-group label {
+    margin-top: 8px;
+    margin-bottom : 4px;
+    font-weight: normal;
+    font-size: .8em;
+    color: #777777;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.wgt-form-group .form-control,
+.wgt-form-group .small-input{
+    height: 32px;
+    padding: 0px 5px;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+.wgt-form-group.validationtext {
+    color: red;
+    font-size: 0.7em;
+    padding-left: 5px;
+}
+.apply-bootstrap .btn {
+    border-radius: 2px;
+}
+.createformcontainer .btn,
+.moduleCreateForm .btn{
+    padding: 4px 25px;
+}
+.createformcontainer .linkaction {
+    font-size: .8em;
+}
+.createformcontainer .textarea-field {
+    height: 65px;
+    resize: none;
+    width: 100%;
+    resize: none;
+    padding-left: 1px;
+    padding-right: 1px;
+    font-size: .9em;
+    border-radius: 2px;
+}
+.view-container {
+    height: 80%;
+}
+.namecard-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.namecard-email {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: grey;
+}
+.wgt-list {
+    padding: 10px 0px;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 2px solid #ddd;
+}
+.wgt-list .list-group-item{
+    padding: 0px 0px 0px 3px;
+}
+.wgt-list .wgt-list-title {
+    font-size: .9em;
+}
+.wgt-list .wgt-list-content {
+    font-size: .7em;
+    color: #555;
+}
+.wgt-list .wgt-list-content-md {
+    font-size: .8em;
+    color: #666;
+}
+.wgt-list .wgt-list-content-sm {
+    font-size: .6em;
+    color: #666;
+}
+.wgt-list .wgt-list-row:after,
+.wgt-list .wgt-list-row:before {
+    content: " ";
+    display: table;
+    clear: both;
+}
+.wgt-list .wgt-list-row .wgt-list-col {
+    float: left;
+    padding : 2px 5px;
+    box-sizing: border-box;
+    max-width: 82%;
+}
+div.tab-content .wgt-list-row .wgt-list-col a {
+    max-width : 90%;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+.emailstab .wgt-list .wgt-list-row .wgt-list-col {
+    max-width: 100%;
+}
+.emailstab .wgt-list .wgt-list-row .wgt-list-col a{
+    max-width: 92%;
+}
+.emailstab .openEmail,
+.emailstab .closeEmail{
+    float : left;
+    margin-right: 8px;
+}
+.wgt-list.comment {
+    min-width: 230px;
+}
+.wgt-list-row.commentcontent {
+    background: white;
+    padding: 6px 0px;
+    margin: 5px 0 5px 0px;
+}
+.apply-bootstrap .setting-list-view {
+    padding-top: 10px;
+}
+.apply-bootstrap .moduleCreateForm {
+    margin-bottom: 15px;
+}
+.apply-bootstrap .setting-list-view .setting-list {
+    width: 100%;
+    padding: 10px 0px;
+}
+.apply-bootstrap .setting-list-view .setting-list-col {
+    float: left;
+    padding : 2px 5px;
+    box-sizing: border-box;
+}
+.apply-bootstrap .setting-list-view .setting-list-col-title {
+    font-size: .9em;
+    font-weight: 500;
+}
+.apply-bootstrap .setting-list-view .setting-list-col-title i {
+    font-size: 24px;
+}
+.apply-bootstrap .setting-list-view .setting-list-col-title span {
+    position: relative;
+    top: -5px;
+    font-size: 15px;
+    padding-left: 8px;
+}
+.setting-list-row .toggle-switch{
+    display: inline-block !important;
+    min-width: 48px !important;
+    border-radius: 24px !important;
+    height: 24px !important;
+}
+.setting-list-row .toggle-switch .switch-left{
+    color: blue !important;
+    background: blue !important;
+    width: 60% !important;
+    position: relative !important;
+    display: inline-block !important;
+    height: 40px;
+}
+.setting-list-row .toggle-switch .knob{
+    border-right: none !important;
+    background-color: white !important;
+    width: 40% !important;
+    border-radius: 10px !important;
+    position: relative !important;
+    right: 20px !important;
+    height: 22px;
+}
+.setting-list-row .toggle-switch .switch-right{
+    color: lightgrey !important;
+    background: lightgrey !important;
+    width: 60% !important;
+    position: relative !important;
+    display: inline-block !important;
+    top: -40px !important;
+    right: -30px !important;
+    height: 22px;
+}
+.apply-bootstrap .savesettings {
+    text-align: center;
+    display: block;
+}
+.apply-bootstrap .savesettings .btn-success {
+    width: 100px;
+    margin-top: 25px;
+}
+.wgt-detail {
+    float: left;
+    width:100%;
+    padding : 0px 0px 10px 0px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #ccc;
+}
+.wgt-detail .list-group-item{
+    padding: 0px 0px 0px 3px;
+}
+.wgt-detail .wgt-detail-title {
+    font-size: .9em;
+}
+.wgt-detail .wgt-detail-content {
+    font-size: .8em;
+    color: #555;
+}
+.wgt-detail .wgt-detail-row:after,
+.wgt-detail .wgt-detail-row:before {
+    content: " ";
+    display: table;
+    clear: both;
+}
+.wgt-detail .wgt-detail-row .wgt-detail-col {
+    float: left;
+    padding: 2px 5px;
+    box-sizing: border-box;
+}
+.commentsviewwrapper {
+    margin-top: 15px;
+}
+.commentsviewwrapper button[type="submit"] {
+    margin : 8px 0px;
+}
+.commentsviewwrapper .wgt-list-view {
+    width: 100%;
+}
+.commentspanel button{
+    margin : 8px 0px;
+}
+.commentspanel .wgt-list-view{
+    display: inline-block !important;
+    width:100% !important;
+}
+.hide {
+    display: none;
+}
+.redColor {
+    color: red;
+}
+.apply-bootstrap .mandatoryIndicator {
+    padding-left: 3px;
+    vertical-align: middle;
+    display: inline-block;
+    float: right;
+}
+span.block {
+    display:block;
+}
+span.inlineblock {
+    display: inline-block;
+}
+div.tabview {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.tabview div.tab-menu {
+    width: 100%;
+    float: left;
+}
+.tabview div.tab-menu .list-group {
+    margin-top: 10px;
+    box-shadow: none;
+}
+.tabview div.tab-menu .moduleName{
+    padding: 2px 12px;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+.tabview div.tab-menu .moduleName.timeline,
+.tabview div.tab-menu .moduleName.activities{
+    padding-top: 4px;
+}
+.tabview div.tab-menu .list-group .active-tab-menu {
+    background: #707377;
+}
+.tabview div.tab-menu .list-group a{
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #E0E0E0;
+    box-shadow: none;
+    padding: 8px 0px !important;
+    margin: 0px !important;
+    text-align: left;
+    height: 46px;
+    background-color: white !important;
+}
+.tabview div.tab-menu .list-group a i {
+    font-size: 24px;
+    float: left;
+}
+div.tab-content{
+    max-height: 100%;
+    overflow: auto;
+}
+
+.panel > .list-group
+{
+    margin-bottom: 0;
+}
+.panel > .list-group .list-group-item
+{
+    border-width: 1px 0;
+}
+.panel > .list-group .list-group-item:first-child
+{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.panel > .list-group .list-group-item:last-child
+{
+    border-bottom: 0;
+}
+.panel-heading + .list-group .list-group-item:first-child
+{
+    border-top-width: 0;
+}
+.vtigerlauncher {
+    width: 35px;
+    height: 35px;
+    border-radius: 75px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+    position: absolute;
+    right: 28%;
+    top: 2%;
+    z-index: 100;
+    background-color: white;
+    cursor:pointer;
+}
+.fieldlabel {
+    font-size: 10px;
+}
+.fieldgroup {
+    margin-bottom: 0px;
+}
+.firstfield {
+    margin-top: 5px;
+}
+.list {
+    border: 1px solid grey;
+    margin-top: 122px;
+}
+.listheader {
+    padding: 5px;
+    margin-top: 5px;
+    background: #f3f3f3;
+    font-size: .9em;
+    border-top: 1px solid #ddd;
+}
+.listheadercontent {
+    margin-left: 10px;
+}
+.padding-left-zero {
+    padding-left: 0 !important;
+}
+.padding-left-right-zero {
+    padding: 0 0;
+}
+.padding-right-zero {
+    padding-right: 0 !important;
+}
+.padding-left-one {
+    padding-left: 1px !important;
+}
+.padding-right-one {
+    padding-right: 1px !important;
+}
+.margin-right-zero {
+    margin-right: 0 !important;
+}
+.createActivityForm,
+.createticketformcontainer,
+.createcaseformcontainer,
+.createOpportunityForm {
+    overflow: auto;
+}
+.apply-bootstrap .somemargintop {
+    margin-top: 5px !important;
+}
+.apply-bootstrap .display-inline-block {
+    display: inline-block;
+}
+.apply-bootstrap .status-label {
+    padding-top: 5px;
+}
+.apply-bootstrap .break-word {
+    word-wrap: break-word;
+}
+.apply-bootstrap .navigationbar {
+    padding-top: 5px;
+}
+.apply-bootstrap .navigationtext {
+    font-size: .7em;
+}
+.apply-bootstrap .recordDetails {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+}
+.apply-bootstrap textarea.commentbox {
+    resize: none;
+    width: 100%;
+    padding: 8px;
+    font-size: .9em;
+    border-radius: 5px;
+    height: 80px;
+}
+.apply-bootstrap .editFormButtonGroup {
+}
+.apply-bootstrap .eachcomment {
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+}
+.apply-bootstrap .comments {
+    padding: 10px;
+}
+.apply-bootstrap .select-mini {
+    font-size: 10px;
+    height: 18px;
+    width: 100px;
+}
+.apply-bootstrap .small-input {
+    width : 100%;
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.apply-bootstrap .attachemailbutton {
+    height: 29px;
+    width: 34px;
+    margin-left: 1px;
+    padding-right: 5px;
+    background: #F0F0F0 !important;
+}
+.apply-bootstrap .attachemailimg {
+    width: 100%;
+    margin-bottom: 2px;
+}
+.apply-bootstrap.archiveEmail {
+    margin-right: 2px;
+    -webkit-user-select: none;
+    display: inline-block;
+}
+.apply-bootstrap .listviewheadercontainer {
+    padding: 8px 0px;
+    font-size: .9em;
+    font-style: normal;
+}
+.apply-bootstrap .listviewheadercontainer .title {
+    vertical-align: middle;
+    font-size: 18px;
+}
+.apply-bootstrap .listviewheadercontainer .add-record-icon {
+    vertical-align: middle;
+    margin-top: 2px;
+}
+.red-color {
+    color: red !important;
+}
+/*timeline css*/
+
+.apply-bootstrap .timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+}
+.apply-bootstrap .timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: #eeeeee;
+    left: 9px;
+    margin-right: -1.5px;
+}
+.apply-bootstrap .timeline > li {
+    position: relative;
+}
+.apply-bootstrap .timeline > li:before,
+.apply-bootstrap .timeline > li:after {
+    content: " ";
+    display: table;
+}
+.apply-bootstrap .timeline > li:after {
+    clear: both;
+}
+.apply-bootstrap .timeline > li:before,
+.apply-bootstrap .timeline > li:after {
+    content: " ";
+    display: table;
+}
+.apply-bootstrap .timeline > li:after {
+    clear: both;
+}
+.apply-bootstrap .timelinepost {
+    width : 100%;
+    margin-bottom : 8px;
+}
+.apply-bootstrap .timeline > li > .timeline-panel {
+    width: calc( 100% - 38px );
+    float: right;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    padding: 5px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+.apply-bootstrap .timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 10px;
+    left: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-right: 15px solid #ccc;
+    border-left: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+content: " ";
+}
+.apply-bootstrap .timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 10px;
+    left: -13px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-right: 14px solid #fff;
+    border-left: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+}
+.apply-bootstrap .timeline > li > .timeline-badge {
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    line-height: 23px;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    margin-right: -25px;
+    background-color: #999999;
+    z-index: 1;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.apply-bootstrap .timeline > li > .timeline-badge > i {
+    font-size: 15px !important;
+}
+.apply-bootstrap .timeline > li.timeline-inverted > .timeline-panel {
+    float: left;
+}
+.apply-bootstrap .timeline > li.timeline-inverted > .timeline-panel:before {
+    border-right-width: 0;
+    border-left-width: 15px;
+    right: -15px;
+    left: auto;
+}
+.apply-bootstrap .timeline > li.timeline-inverted > .timeline-panel:after {
+    border-right-width: 0;
+    border-left-width: 14px;
+    right: -14px;
+    left: auto;
+}
+.apply-bootstrap .timeline-badge.primary {
+    background-color: #2e6da4 !important;
+}
+.apply-bootstrap .timeline-badge.success {
+    background-color: #3f903f !important;
+}
+.apply-bootstrap .timeline-badge.warning {
+    background-color: #f0ad4e !important;
+}
+.apply-bootstrap .timeline-badge.danger {
+    background-color: #d9534f !important;
+}
+.apply-bootstrap .timeline-badge.info {
+    background-color: #5bc0de !important;
+}
+.apply-bootstrap .timeline-title {
+    margin: 2px 0;
+    color: inherit;
+    font-size: .7em;
+}
+.apply-bootstrap .cmt-quote {
+    font-size: 1.8em;
+    line-height: 3px;
+    vertical-align: middle;
+}
+.timeline-time {
+    font-size: .6em;
+}
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+.timeline-body > p + p {
+    margin-top: 5px;
+}
+.timeline > li > .timeline-panel div {
+    margin: 4px 0;
+}
+.timeline > li > .timeline-panel div.timeline-body {
+    font-size: .7em;
+    font-style: italic;
+    margin: -5px 0 4px;
+    white-space: pre-line;
+}
+.cursor-pointer {
+    cursor:pointer;
+}
+.apply-bootstrap .emailcontent {
+    padding: 10px;
+    margin-left: 10px;
+    padding-left: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(228, 213, 213);
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+    display: none;
+    width: 145%;
+}
+.apply-bootstrap .validationtext {
+    color:red;
+    font-size: .7em;
+    padding-left: 5px;
+    display: inherit;
+}
+.apply-bootstrap .form-control.wgt-control, .apply-bootstrap .btn.wgt-control{
+    border-radius: 1px;
+}
+.apply-bootstrap .editingInfo {
+    font-size: .7em;
+    color: #65CFFC;
+    margin-left: 30%;
+    margin-bottom: -10px;
+    margin-top: 1px;
+}
+.apply-bootstrap .no-data-message {
+    padding-top: 13px;
+    text-align: center;
+    font-size: .8em;
+}
+.apply-bootstrap input[type="text"].form-control.wgt-control, 
+.apply-bootstrap input[type="password"].form-control.wgt-control,
+.apply-bootstrap input[type="email"].form-control.wgt-control{
+    background: #f9f9f9;
+    border-color: white;
+}
+.apply-bootstrap .label-lightgreen {
+    background-color: #BEEB9F;
+}
+.apply-bootstrap .label-purple {
+    background-color: #9b59b6;
+}
+.apply-bootstrap .label-brownyellow {
+    background-color: #FFCC66;
+}
+.apply-bootstrap .label-pink {
+    background-color: #FF9999;
+}
+.apply-bootstrap .action-icon {
+    opacity: .5;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+.apply-bootstrap .action-icon:hover {
+    opacity: .8;
+}
+.apply-bootstrap .summaryImg {
+    width: 45px;
+    height: 45px;
+}
+.apply-bootstrap .formcancellink {
+    font-size: .8em;
+}
+.apply-bootstrap .vtinput-prepend {
+    margin-top: 1px;
+    display: inline-flex;
+    width: 100%;
+}
+.apply-bootstrap .vtinput-addon {
+    min-height: 0px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 2px solid lightgrey;
+    font-size: 16px;
+    color: #999;
+    padding: 6px 0px;
+}
+.apply-bootstrap .vtiger-header-icon {
+    margin-top: -4px;
+}
+.apply-bootstrap .vtiger-trademark {
+    text-decoration: none !important;
+}
+.apply-bootstrap .wait {
+    cursor: wait !important;
+}
+.apply-bootstrap .login-button {
+    width: 45%;
+}
+.apply-bootstrap .comment-username {
+    font-size: .8em;
+}
+.apply-bootstrap .comment-content {
+    font-size: 1.1em;
+    color: black;
+}
+.apply-bootstrap .login-error {
+    font-size: .8em;
+}
+/*bootstrap unscoping btn css*/
+.apply-bootstrap.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.apply-bootstrap.btn:focus,
+.apply-bootstrap.btn:active:focus,
+.apply-bootstrap.btn.active:focus,
+.apply-bootstrap.btn.focus,
+.apply-bootstrap.btn:active.focus,
+.apply-bootstrap.btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.apply-bootstrap.btn:hover,
+.apply-bootstrap.btn:focus,
+.apply-bootstrap.btn.focus {
+  color: #333333;
+  text-decoration: none;
+}
+.apply-bootstrap.btn:active,
+.apply-bootstrap.btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.apply-bootstrap.btn.disabled,
+.apply-bootstrap.btn[disabled],
+fieldset[disabled] .apply-bootstrap.btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.apply-bootstrap.btn-primary {
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.apply-bootstrap.btn-primary:hover,
+.apply-bootstrap.btn-primary:focus,
+.apply-bootstrap.btn-primary.focus,
+.apply-bootstrap.btn-primary:active,
+.apply-bootstrap.btn-primary.active,
+.open > .dropdown-toggle.apply-bootstrap.btn-primary {
+  color: #ffffff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.apply-bootstrap.btn-primary:active,
+.apply-bootstrap.btn-primary.active,
+.open > .dropdown-toggle.apply-bootstrap.btn-primary {
+  background-image: none;
+}
+.apply-bootstrap.btn-primary.disabled,
+.apply-bootstrap.btn-primary[disabled],
+fieldset[disabled] .apply-bootstrap .btn-primary,
+.apply-bootstrap.btn-primary.disabled:hover,
+.apply-bootstrap.btn-primary[disabled]:hover,
+fieldset[disabled] .apply-bootstrap.btn-primary:hover,
+.apply-bootstrap.btn-primary.disabled:focus,
+.apply-bootstrap.btn-primary[disabled]:focus,
+fieldset[disabled] .apply-bootstrap.btn-primary:focus,
+.apply-bootstrap.btn-primary.disabled.focus,
+.apply-bootstrap.btn-primary[disabled].focus,
+fieldset[disabled] .apply-bootstrap.btn-primary.focus,
+.apply-bootstrap.btn-primary.disabled:active,
+.apply-bootstrap.btn-primary[disabled]:active,
+fieldset[disabled] .apply-bootstrap.btn-primary:active,
+.apply-bootstrap.btn-primary.disabled.active,
+.apply-bootstrap.btn-primary[disabled].active,
+fieldset[disabled] .apply-bootstrap.btn-primary.active {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.apply-bootstrap.btn-primary .badge {
+  color: #337ab7;
+  background-color: #ffffff;
+}
+.apply-bootstrap.btn-danger {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.apply-bootstrap.btn-danger:hover,
+.apply-bootstrap.btn-danger:focus,
+.apply-bootstrap.btn-danger.focus,
+.apply-bootstrap.btn-danger:active,
+.apply-bootstrap.btn-danger.active,
+.open > .dropdown-toggle.apply-bootstrap.btn-danger {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.apply-bootstrap.btn-danger:active,
+.apply-bootstrap.btn-danger.active,
+.open > .dropdown-toggle.apply-bootstrap.btn-danger {
+  background-image: none;
+}
+.apply-bootstrap.btn-danger.disabled,
+.apply-bootstrap.btn-danger[disabled],
+fieldset[disabled] .apply-bootstrap.btn-danger,
+.apply-bootstrap.btn-danger.disabled:hover,
+.apply-bootstrap.btn-danger[disabled]:hover,
+fieldset[disabled] .apply-bootstrap.btn-danger:hover,
+.apply-bootstrap.btn-danger.disabled:focus,
+.apply-bootstrap.btn-danger[disabled]:focus,
+fieldset[disabled] .apply-bootstrap.btn-danger:focus,
+.apply-bootstrap.btn-danger.disabled.focus,
+.apply-bootstrap.btn-danger[disabled].focus,
+fieldset[disabled] .apply-bootstrap.btn-danger.focus,
+.apply-bootstrap.btn-danger.disabled:active,
+.apply-bootstrap.btn-danger[disabled]:active,
+fieldset[disabled] .apply-bootstrap.btn-danger:active,
+.apply-bootstrap.btn-danger.disabled.active,
+.apply-bootstrap.btn-danger[disabled].active,
+fieldset[disabled] .apply-bootstrap.btn-danger.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.apply-bootstrap.btn-danger .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
+.apply-bootstrap.btn.noty-confirm-yes,
+.apply-bootstrap.btn.noty-confirm-no{
+    font-size: 11px;
+    padding: 4px 13px;
+}
+.ui-dialog {
+    font-size: 15px;
+}
+ul.dropdown-menu {
+    margin-top: -1px !important;
+}
+.select2 > .select2-choice.ui-select-match {
+    height: 29px;
+}
+.selectize-control > .selectize-dropdown {
+    top: 36px;
+}
+.ui-select-multiple.ui-select-bootstrap .ui-select-match .close {
+  font-size: 1.6em;
+  line-height: 0.75;
+  margin-top: 2px;
+  margin-left: -2px;
+}
+.ui-select-multiple.ui-select-bootstrap .ui-select-match-item {
+  outline: 0;
+  margin: 0 3px 3px 0;
+  padding: 1px;
+  padding-left: 3px;
+}
+.ui-select-multiple.ui-select-bootstrap input.ui-select-search {
+  background-color: transparent !important;
+  border: none;
+  outline: none;
+  height: 1.666666em;
+  margin-bottom: 0px;
+}
+.apply-bootstrap .ui-select-search {
+  width: 100% !important;
+}
+/*  overriding google css */
+/* to avoid overlapping of gmail complementary element*/
+.adC {
+    position : relative !important;
+}
+div.AT {
+    display : none;
+}
+/* hide the google+ side bar widget */
+td.Bu.y3 {
+    display: none;
+}
+.detail-header i {
+    padding-top:6px;
+    color:#4E4E4E;
+    opacity: 1.3;
+    font-size: 19px;
+    cursor:pointer;
+    margin-right: 16px;
+}
+ .contact-detail i {
+    color:#4E4E4E;
+    opacity: 0.4;
+    font-size: 19px;
+    cursor:pointer;
+    padding-right:2px;
+    margin-top: -4px;
+}
+.detailviewcontainer {
+    background: white;
+    color: black;
+    padding-top: 16px;
+    font-size: 0.8em;
+    line-height: 2.5em;
+    margin-left: 0px;
+    margin-bottom: 40px;
+}
+.header-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.detailviewcontainer .field {
+    border-bottom: 2px solid #E0E0E0;
+    margin-bottom: 4px;   
+}
+.detailviewcontainer #detailview-fieldname{
+    width : 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:gray;
+}
+.detailviewcontainer .display-fieldValue{
+    width : 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.fa-link {
+    cursor: pointer;
+    font-size: 13px;
+    float: right;
+    margin-top: 2px;
+}
+.contact-header .fa-link {
+    float: left !important;
+}
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{
+  float: left;
+}
+.col-lg-1,
+.col-md-1,
+.col-sm-1{
+	width: 8.33333333%;
+}
+.col-lg-2,
+.col-md-2,
+.col-sm-2{
+	width: 16.66666667%;
+}
+.col-lg-3,
+.col-md-3,
+.col-sm-3{
+	width: 25%;
+}
+.col-lg-4,
+.col-md-4,
+.col-sm-4{
+	width: 33.33333333%;
+}
+.col-lg-5,
+.col-md-5,
+.col-sm-5{
+	width: 41.66666667%;
+}
+.col-lg-6,
+.col-md-6,
+.col-sm-6{
+	width: 50%;
+}
+.col-lg-7,
+.col-md-7,
+.col-sm-7{
+	width: 58.33333333%;
+}
+.col-lg-8,
+.col-md-8,
+.col-sm-8{
+	width: 66.66666667%;
+}
+.col-lg-9,
+.col-md-9,
+.col-sm-9{
+	width: 75%;
+}
+.col-lg-10,
+.col-md-10,
+.col-sm-10{
+	width: 83.33333333%;
+}
+.col-lg-11,
+.col-md-11,
+.col-sm-11{
+	width: 91.66666667%;
+}
+.col-lg-12,
+.col-md-12,
+.col-sm-12{
+	width: 100%;
+}
+.form-control:not(textarea) {
+    width: 100% !important;
+    box-shadow: none !important;
+    height: 32px !important;
+    border: none !important;
+    border-bottom: 2px solid lightgrey !important;
+    background-color: white !important;
+    padding: 0px !important;
+    color: black !important;
+}
+.form-control:focus {
+    border-bottom: 2px solid blue !important;
+}
+.btn {
+    width: 100% !important;
+    height: 40px !important;
+    background-color: white !important;
+    color: blue !important;
+    border: 1px solid lightgrey !important;
+    border-radius: 5px !important;
+    margin-bottom: 4px !important;
+}
+.createoptionscontainer button.btn-large {
+    color: black !important;
+    height: 50px !important;
+    border: none !important;
+    border-bottom: 1px solid #EAEAEA !important;
+    margin: 0px !important;
+    border-radius: 0px !important;
+}
+.editFormButtonGroup a {
+    padding: 12px;
+    display: block;
+    background-color: white;
+    height: 40px;
+    color: black !important;
+    text-decoration: none !important;
+    border: 1px solid lightgrey !important;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}
+.login-button {
+    color: blue !important;
+    border: 1px solid blue !important;
+    border-radius: 6px !important;
+}
+.noty-confirm-yes {
+    color: blue !important;
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 6px !important;
+    margin-bottom: 4px !important;
+}
+.noty-confirm-no {
+    color: black !important;
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 6px !important;
+    margin-bottom: 4px !important;
+    margin-left: 0px !important;
+}
+.editFormButtonGroupContainer {
+    margin-bottom: 0px !important;
+}
+#loginView {
+    background-color: white;
+    height: 98%;
+    margin: 0px -15px;
+    margin-top: 10px;
+    padding: 15px;
+}
+.goBack {
+    margin : 0px -15px !important;
+}
+.goBack .btn {
+    text-align: left;
+    border-radius: 0px !important;
+    border: none !important;
+    font-size: 16px;
+    padding: 8px 15px !important;
+    margin: 0px !important;
+}
+.goBack .btn i {
+    padding-right: 5px;
+}
+.apply-bootstrap a {
+    font-weight: normal !important;
+}
+.oauthwrapper {
+    width: 100%;
+}
+.oauthwrapper .btn {
+    border: none !important;
+    width: 50px !important;
+    border-radius: 0px !important;
+    color: black !important;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*   17.11.2020  : Custom Scrollbar Issue  */
+
+.scrollable-dropdown-menu .dropdown-menu {
+    max-height: 150px;
+    overflow-y: auto;
+    width : 90%
+}  
+
+.scrollable-dropdown-menu ::-webkit-scrollbar {
+    display: unset !important;
+    width: 5px;
+   
+}
+
+.scrollable-dropdown-menu ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+   
+
+.record-header-actions {
+    width: 32px;
+}
+
