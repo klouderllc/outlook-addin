@@ -5,12 +5,12 @@
   <ProviderName>Repbox</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Repbox for Outlook" />
-  <Description DefaultValue="Entile your partners to Nurture Leads, Delight Customers and Win Deals " />
-  <IconUrl DefaultValue="https://localhost:3000/office/assets/images/logo80.png" />
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-80.png" />
-  <SupportUrl DefaultValue="https://www.contoso.com/help" />
+  <Description DefaultValue="Entitle your partners to Nurture Leads, Delight Customers, and Win Deals." />
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon-80.png" />
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-128.png" />
+  <SupportUrl DefaultValue="https://help.repbox.co/" />
   <AppDomains>
-    <AppDomain>contoso.com</AppDomain>
+    <AppDomain>https://www.repbox.co/</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox" />
@@ -62,7 +62,6 @@
                     <SourceLocation resid="Taskpane.Url" />
                   </Action>
                 </Control>
-
               </Group>
             </OfficeTab>
           </ExtensionPoint>
@@ -73,7 +72,7 @@
       <bt:Images>
         <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png" />
         <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png" />
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/office/assets/images/logo80.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html" />
@@ -81,12 +80,10 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Repbox for Outlook" />
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Repbox for Outlook" />
-        <bt:String id="ActionButton.Label" DefaultValue="Perform an action" />
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Repbox CRM" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying all available properties." />
-        <bt:String id="ActionButton.Tooltip" DefaultValue="Perform an action when clicked." />
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens the Repbox Taskpane to display all available properties." />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
