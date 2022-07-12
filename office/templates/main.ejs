@@ -23,7 +23,7 @@
         <div class="col-sm-3" style="margin-right:-10px !important;">
             
             <span class="pull-right">
-                <i ng-show="view !== 'login'" class="pull-right fa fa-power-off logout cursor-pointer action-icon" ng-really-click="logout()" ng-really-message="Are you sure you want to logout of Repbox ?" title="Logout"></i>
+                <i ng-show="view !== 'login'" class="pull-right fa fa-power-off logout cursor-pointer action-icon" ng-really-click="logout()" ng-really-message="Are you sure you want to logout of Repbox?" title="Logout"></i>
             </span>
             <span class="user-display-name pull-right">
                 <a href="{{userpreferenceUrl}}" target="_blank" title="{{currentUserFirstName}}">{{currentUserFirstName|cut:false:15:'..'}}</a>
@@ -59,6 +59,7 @@
                 <div class="center-block clearfix">
                     <img class="vtigerlogo" src="<%= baseresourceurl%>assets/images/logo.png">
                 </div>
+                Please provide your account credentials below
                 <div class="loginformwrapper">
                     <form ng-submit="login(form.$valid)" name="form" novalidate>
                         <div ng-show="localTesting" class="form-group input-group center-block clearfix"><input type="text" class="form-control wgt-control" placeholder="InstanceURL" ng-model="crmInstanceUrl" /></div>
@@ -86,7 +87,7 @@
                         </div>
                     </form>
                 </div>
-                
+                <a href="https://www.repbox.co/demo " target="_blank">Sign up for an account</a>
             </div>
         </div>
     </div>
@@ -432,7 +433,7 @@
                     <div class="namecard-email" title="{{email}}"><small>{{email}}</small></div>
                 </div>
                 <div class="actions record-header-actions inlineblock floatRight clearfix">
-                    <i class="fa fa-link action-icon" title="Link email to this {{module}}" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, crmRecord)" ng-really-message="Do you want to archive this email to Vtiger?"></i>
+                    <i class="fa fa-link action-icon" title="Link email to this {{module}}" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, crmRecord)" ng-really-message="Do you want to archive this email to Repbox?"></i>
                     <!--<a ng-show="crmRecord.editPermission != 0" class="fa fa-pencil cursor-pointer action-icon pull-right" href="#/edit" title="Edit"></a>   -->
                     <a ng-show="crmRecord.editPermission != 0" class="fa fa-pencil cursor-pointer action-icon pull-right"  title="Edit" href="" ng-click="editIconClicked()" ng-controller="EditIconClickedController"> 
                        
@@ -1310,7 +1311,7 @@
                                         <div class="wgt-list" ng-repeat="opportunity in relatedOpportunities">
                                             <div class="wgt-list-row" ng-init="showEditIcon = false" ng-mouseenter="showEditIcon = true" ng-mouseleave="showEditIcon = false">
                                                 <div class="wgt-list-col wgt-list-title">
-                                                    <a href="{{opportunity.detailViewUrl}}" title="{{opportunity.label}}" target="_blank">{{opportunity.label}}</a> <i style="cursor: pointer;" class="fa fa-link" title="Link email to this Opportunity" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, opportunity)" ng-really-message="Do you want to archive this email to Vtiger?"></i>
+                                                    <a href="{{opportunity.detailViewUrl}}" title="{{opportunity.label}}" target="_blank">{{opportunity.label}}</a> <i style="cursor: pointer;" class="fa fa-link" title="Link email to this Opportunity" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, opportunity)" ng-really-message="Do you want to archive this email to Repbox?"></i>
                                                 </div>
                                                 <div class="wgt-list-col wgt-list-title pull-right col-right p-0">
                                                     <span ng-show="!showEditIcon && opportunity.amount">{{userpreferences.currency_symbol}} {{opportunity.amount | number:2}}</span>
@@ -1701,7 +1702,7 @@
                                         <div class="wgt-list" ng-repeat="case in relatedCases" ng-init="showEditIcon" ng-mouseenter="showEditIcon = true" ng-mouseleave="showEditIcon = false">
                                             <div class="wgt-list-row">
                                                 <div class="wgt-list-col wgt-list-title">
-                                                    <a href="{{case.detailViewUrl}}" title="{{case.label}}" target="_blank">{{case.label}}</a> <i style="cursor: pointer;" class="fa fa-link" title="Link email to this Case" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, case)" ng-really-message="Do you want to archive this email to Vtiger?"></i>
+                                                    <a href="{{case.detailViewUrl}}" title="{{case.label}}" target="_blank">{{case.label}}</a> <i style="cursor: pointer;" class="fa fa-link" title="Link email to this Case" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, case)" ng-really-message="Do you want to archive this email to Repbox?"></i>
                                                 </div>
                                                 <div class="wgt-list-col wgt-list-title pull-right p-0">
                                                     <span ng-show="showEditIcon">
@@ -2064,7 +2065,7 @@
                                         <div class="wgt-list" ng-repeat="ticket in relatedTickets" ng-init="showEditIcon" ng-mouseenter="showEditIcon = true" ng-mouseleave="showEditIcon = false">
                                             <div class="wgt-list-row">
                                                 <div class="wgt-list-col wgt-list-title">
-                                                    <a href="{{ticket.detailViewUrl}}" title="{{ticket.label}}" target="_blank">{{ticket.label}}</a> <i style="cursor: pointer;" class="fa fa-link" title="Link email to this Ticket" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, ticket)" ng-really-message="Do you want to archive this email to Vtiger?"></i>
+                                                    <a href="{{ticket.detailViewUrl}}" title="{{ticket.label}}" target="_blank">{{ticket.label}}</a> <i style="cursor: pointer;" class="fa fa-link" title="Link email to this Ticket" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, ticket)" ng-really-message="Do you want to archive this email to Repbox?"></i>
                                                 </div>
                                                 <div class="wgt-list-col wgt-list-title pull-right p-0">
                                                     <span ng-show="showEditIcon">
