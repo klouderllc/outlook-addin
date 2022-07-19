@@ -6,8 +6,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Repbox for Outlook" />
   <Description DefaultValue="Entitle your partners to Nurture Leads, Delight Customers, and Win Deals." />
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-64.png" />
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-128.png" />
+  <IconUrl DefaultValue="https://outlook-addin.repbox.co/assets/icon-64.png" />
+  <HighResolutionIconUrl DefaultValue="https://outlook-addin.repbox.co/assets/icon-128.png" />
   <SupportUrl DefaultValue="https://help.repbox.co/" />
   <Hosts>
     <Host Name="Mailbox" />
@@ -20,7 +20,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/src/taskpane/taskpane.html" />
+        <SourceLocation DefaultValue="https://outlook-addin.repbox.co/src/taskpane/taskpane.html" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -68,14 +68,14 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png" />
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png" />
-        <bt:Image id="Icon.64x64" DefaultValue="https://localhost:3000/assets/icon-64.png" />
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png" />
+        <bt:Image id="Icon.16x16" DefaultValue="https://outlook-addin.repbox.co/assets/icon-16.png" />
+        <bt:Image id="Icon.32x32" DefaultValue="https://outlook-addin.repbox.co/assets/icon-32.png" />
+        <bt:Image id="Icon.64x64" DefaultValue="https://outlook-addin.repbox.co/assets/icon-64.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://outlook-addin.repbox.co/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/src/commands/commands.html" />
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/office/templates/start.html" />
+        <bt:Url id="Commands.Url" DefaultValue="https://outlook-addin.repbox.co/src/commands/commands.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://outlook-addin.repbox.co/office/templates/start.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Repbox for Outlook" />
