@@ -1,7 +1,7 @@
 <ng-view></ng-view>
 <div class="apply-bootstrap" ng-show="view !== 'login' && view !== 'getstarted'">
-  <div class="vtHeader clearfix" style="margin-left:-10px !important;;margin-right:-15px !important;">
-    <div class="col-sm-9" style="margin-left:-10px !important">
+  <div class="vtHeader clearfix" style="margin-left:-10px !important;;margin-right:-10px !important;">
+    <div class="col-sm-7" style="margin-left:-10px !important">
       <div>
         <!--   17.11.2020  :  Scrollbar Issue  -->
         <div id="scrollable-dropdown-menu" class="form-group wgt-form-group scrollable-dropdown-menu" ng-form="innerForm" ng-init="referenceModuleName='Contacts'">
@@ -9,12 +9,14 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-3" style="margin-right:-10px !important;">
+    <div class="col-sm-5" style="margin-right:-10px !important;">
       <span class="pull-right">
-        <i ng-show="view !== 'login'" class="pull-right fa fa-power-off logout cursor-pointer action-icon" ng-really-click="logout()" ng-really-message="Are you sure you want to logout of Repbox?" title="Logout"></i>
+        <i ng-show="view !== 'login'" class="pull-right fa fa-sign-out fa-2x logout cursor-pointer action-icon" ng-really-click="logout()" ng-really-message="Are you sure you want to logout of Repbox?" title="Sign out">&nbsp;Logout</i>
       </span>
       <span class="user-display-name pull-right">
-        <a href="{{userpreferenceUrl}}" target="_blank" title="{{currentUserFirstName}}">{{currentUserFirstName|cut:false:15:'..'}}</a>
+        <a href="{{userpreferenceUrl}}" target="_blank" class="pull-right fa fa-dashboard fa-2x cursor-pointer action-icon" title="{{currentUserFirstName}}" style="">&nbsp;Dashboard
+          <!-- {{currentUserFirstName|cut:false:15:'..'}} -->
+        </a>
       </span>
     </div>
   </div>
@@ -78,7 +80,7 @@
   </div>
   <div ng-show="view === 'create'">
     <div class="contact-header clearfix">
-      <div class="inlineblock"><img src="<%= baseresourceurl%>assets/images/summary_Contact.png" class="summaryImg"></div>
+      <div class="inlineblock"><img src="<%= baseresourceurl%>assets/images/plus-circle.svg" class="summaryImg"></div>
       <div class="inlineblock header-text">
         <div class="namecard-name" title="{{name}}"><b>{{name}}</b></div>
         <div class="namecard-email" title="{{email}}"><small>{{email}}</small></div>
@@ -147,7 +149,7 @@
                   <label title="{{field.label}}"><span class="redColor mandatoryIndicator" ng-show="field.mandatory">*</span>{{field.label}}</label>
                   <span class="vtinput-prepend">
                     <input class="form-control" type="text" ng-model="field.fieldValue" date-picker name="fieldValue" ng-required="field.mandatory" />
-                    <span class="vtinput-addon"><i class="fa fa-calendar"></i></span>
+                    <span class="vtinput-addon"><i class="fa fa-calendar fa-2x"></i></span>
                   </span>
                   <span class="validationtext" ng-show="innerForm.$dirty && innerForm.fieldValue.$error.required">
                     {{field.label}} is required
@@ -239,7 +241,7 @@
                       <label title="{{field.label}}"><span class="redColor mandatoryIndicator" ng-show="field.mandatory">*</span>{{field.label}}</label>
                       <span class="vtinput-prepend">
                         <input class="form-control" type="text" ng-model="field.fieldValue" birthday-date-picker name="fieldValue" ng-required="field.mandatory" />
-                        <span class="vtinput-addon"><i class="fa fa-calendar"></i></span>
+                        <span class="vtinput-addon"><i class="fa fa-calendar fa-2x"></i></span>
                       </span>
                       <span class="validationtext" ng-show="innerForm.$dirty && innerForm.fieldValue.$error.required">
                         {{field.label}} is required
@@ -251,7 +253,7 @@
                       <label title="{{field.label}}"><span class="redColor mandatoryIndicator" ng-show="field.mandatory">*</span>{{field.label}}</label>
                       <span class="vtinput-prepend">
                         <input class="form-control" type="text" ng-model="field.fieldValue" date-picker name="fieldValue" ng-required="field.mandatory" />
-                        <span class="vtinput-addon"><i class="fa fa-calendar"></i></span>
+                        <span class="vtinput-addon"><i class="fa fa-calendar fa-2x"></i></span>
                       </span>
                       <span class="validationtext" ng-show="innerForm.$dirty && innerForm.fieldValue.$error.required">
                         {{field.label}} is required
@@ -265,7 +267,7 @@
                   <label title="{{field.label}}"><span class="redColor mandatoryIndicator" ng-show="field.mandatory">*</span>{{field.label}}</label>
                   <span class="vtinput-prepend">
                     <input class="form-control" type="text" class="time" ng-model="field.fieldValue" time-picker name="fieldValue" ng-required="field.mandatory" />
-                    <span class="vtinput-addon"><i class="fa fa-clock-o"></i></span>
+                    <span class="vtinput-addon"><i class="fa fa-clock-o fa-2x"></i></span>
                   </span>
                   <span class="validationtext" ng-show="innerForm.$dirty && innerForm.fieldValue.$error.required">
                     {{field.label}} is required
@@ -411,12 +413,15 @@
           </div>
           <div class="namecard-email" title="{{email}}"><small>{{email}}</small></div>
         </div>
-        <div class="actions record-header-actions inlineblock floatRight clearfix">
-          <i class="fa fa-link action-icon" title="Link email to this {{module}}" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, crmRecord)" ng-really-message="Do you want to archive this email to Repbox?"></i>
+      </div>
+      <div class=" col-sm-4 pull-right">
+        <span class="pull-right">
+          <i class="fa fa-link action-icon" title="Link email to this {{module}}" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, crmRecord)" ng-really-message="Do you want to archive this email to Repbox?">&nbsp;Link&nbsp;Email</i>
+        </span>
+        <span class="pull-right">
           <!--<a ng-show="crmRecord.editPermission != 0" class="fa fa-pencil cursor-pointer action-icon pull-right" href="#/edit" title="Edit"></a>   -->
-          <a ng-show="crmRecord.editPermission != 0" class="fa fa-pencil cursor-pointer action-icon pull-right" title="Edit" href="" ng-click="editIconClicked()" ng-controller="EditIconClickedController">
-          </a>
-        </div>
+          <a ng-show="crmRecord.editPermission != 0" class="fa fa-edit fa-2x cursor-pointer action-icon pull-right" title="Edit this {{module}}" href="" ng-click="editIconClicked()" ng-controller="EditIconClickedController">&nbsp;Edit</a>
+        </span>
       </div>
     </div>
     <div class="summaryviewwrapper" ng-controller="RecordSummaryController">
@@ -427,10 +432,10 @@
               <i class="vicon-details"></i> <span class="moduleName clearfix"> Details </span> <i class="fa fa-angle-right floatRight"></i>
             </a>
             <a href="#/timeline" ng-class="getTabMenuClass('timeline')" class="list-group-item text-center" title="Timeline" style="display:none">
-              <i class="fa fa-dashboard"></i> <span class="moduleName timeline clearfix"> Timeline </span> <i class="fa fa-angle-right floatRight"></i>
+              <i class="fa fa-dashboard fa-2x"></i> <span class="moduleName timeline clearfix"> Timeline </span> <i class="fa fa-angle-right floatRight"></i>
             </a>
             <a href="#/events" ng-show="isModuleActive('Events')" ng-class="getTabMenuClass('activities')" class="list-group-item text-center" title="Activities">
-              <i class="fa fa-calendar"></i> <span class="moduleName activities clearfix"> Activities </span> <i class="fa fa-angle-right floatRight"></i>
+              <i class="fa fa-calendar fa-2x"></i> <span class="moduleName activities clearfix"> Activities </span> <i class="fa fa-angle-right floatRight"></i>
             </a>
             <a href="#/emails" ng-show="isModuleActive('Emails')" ng-class="getTabMenuClass('emails')" class="list-group-item text-center" title="Emails" style="display:none">
               <i class="vicon-emails"></i><span class="moduleName clearfix"> Emails </span> <i class="fa fa-angle-right floatRight"></i>
@@ -451,10 +456,10 @@
               <i class="vicon-helpdesk"></i> <span class="moduleName clearfix"> HelpDesk </span> <i class="fa fa-angle-right floatRight"></i>
             </a>
             <a href="#/comments" ng-show="isModuleActive('ModComments')" ng-class="getTabMenuClass('comments')" class="list-group-item text-center" title="Comments">
-              <i class="fa fa-comment"></i> <span class="moduleName clearfix"> Comments </span> <i class="fa fa-angle-right floatRight"></i>
+              <i class="fa fa-comment fa-2x"></i> <span class="moduleName clearfix"> Comments </span> <i class="fa fa-angle-right floatRight"></i>
             </a>
             <a href="#/settings" ng-class="getTabMenuClass('settings')" class="list-group-item text-center" title="Gadget Settings" style="display:none">
-              <i class="fa fa-cog"></i> <span class="moduleName clearfix"> Settings </span> <i class="fa fa-angle-right floatRight"></i>
+              <i class="fa fa-cog fa-2x"></i> <span class="moduleName clearfix"> Settings </span> <i class="fa fa-angle-right floatRight"></i>
             </a>
           </div>
         </div>
@@ -851,7 +856,7 @@
                     </div>
                     <div class="wgt-list-col wgt-list-title col-right pull-right p-0">
                       <span ng-show="showEditIcon">
-                        <i ng-show="hasCreatePermission" class="fa fa-pencil cursor-pointer action-icon" ng-click="editRecord(activity)" title="Edit"></i>
+                        <i ng-show="hasCreatePermission" class="fa fa-edit cursor-pointer action-icon" ng-click="editRecord(activity)" title="Edit"></i>
                       </span>
                     </div>
                   </div>
@@ -1265,7 +1270,7 @@
                       <div class="wgt-list-col wgt-list-title pull-right col-right p-0">
                         <span ng-show="!showEditIcon && opportunity.amount">{{userpreferences.currency_symbol}} {{opportunity.amount | number:2}}</span>
                         <span ng-show="showEditIcon">
-                          <i ng-show="hasCreatePermission" class="fa fa-pencil cursor-pointer action-icon" ng-click="editRecord(opportunity)" title="Edit"></i>
+                          <i ng-show="hasCreatePermission" class="fa fa-edit fa-2x cursor-pointer action-icon" ng-click="editRecord(opportunity)" title="Edit"></i>
                           <i class="fa fa-comments cursor-pointer action-icon" ng-click="showDetails(opportunity)" title="Comment"></i>
                         </span>
                       </div>
@@ -1638,7 +1643,7 @@
                       </div>
                       <div class="wgt-list-col wgt-list-title pull-right p-0">
                         <span ng-show="showEditIcon">
-                          <i ng-show="hasCreatePermission" class="fa fa-pencil cursor-pointer action-icon" ng-click="editRecord(case)" title="Edit"></i>
+                          <i ng-show="hasCreatePermission" class="fa fa-edit fa-2x cursor-pointer action-icon" ng-click="editRecord(case)" title="Edit"></i>
                           <i class="fa fa-comments cursor-pointer action-icon" ng-click="showDetails(case)" title="Comment"></i>
                         </span>
                       </div>
@@ -1981,11 +1986,11 @@
                   <div class="wgt-list" ng-repeat="ticket in relatedTickets" ng-init="showEditIcon" ng-mouseenter="showEditIcon = true" ng-mouseleave="showEditIcon = false">
                     <div class="wgt-list-row">
                       <div class="wgt-list-col wgt-list-title">
-                        <a href="{{ticket.detailViewUrl}}" title="{{ticket.label}}" target="_blank">{{ticket.label}}</a> <i style="cursor: pointer;" class="fa fa-link" title="Link email to this Ticket" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, ticket)" ng-really-message="Do you want to archive this email to Repbox?"></i>
+                        <a href="{{ticket.detailViewUrl}}" title="{{ticket.label}}" target="_blank">{{ticket.label}}</a> <i style="cursor: pointer;" class="fa fa-link fa-2x" title="Link email to this Ticket" ng-controller="AttachEmailController" ng-really-click="attachEmail(undefined, ticket)" ng-really-message="Do you want to archive this email to Repbox?"></i>
                       </div>
                       <div class="wgt-list-col wgt-list-title pull-right p-0">
                         <span ng-show="showEditIcon">
-                          <i ng-show="hasCreatePermission" class="fa fa-pencil cursor-pointer action-icon" ng-click="editRecord(ticket)" title="Edit"></i>
+                          <i ng-show="hasCreatePermission" class="fa fa-edit cursor-pointer action-icon" ng-click="editRecord(ticket)" title="Edit"></i>
                           <i class="fa fa-comments cursor-pointer action-icon" ng-click="showDetails(ticket)" title="Comment"></i>
                         </span>
                       </div>
