@@ -144,12 +144,21 @@
                   </span>
                 </div>
               </div>
+              <div ng-switch-when="reference">
+                <div class="form-group wgt-form-group" ng-form="innerForm" ng-init="referenceModuleName='{{field.type.refersTo[0]}}'">
+                  <label title="{{field.label}}"><span class="redColor mandatoryIndicator" ng-show="field.mandatory">*</span>Contact {{field.label}}</label>
+                  <input class="form-control" type="text" ng-model="field.fieldValue" ng-focus="setCurrentReferenceModuleName(field.type.refersTo[0])" name="fieldValue" placeholder="Type to search" typeahead="record as record.label for record in getReferenceRecords($viewValue)" typeahead-editable="true" typeahead-min-length="3" ng-required="field.mandatory">
+                  <span class="validationtext" ng-show="innerForm.$dirty && innerForm.fieldValue.$error.required">
+                    {{field.label}} is required
+                  </span>
+                </div>
+              </div>
               <div ng-switch-default>
                 <div class="form-group wgt-form-group" ng-form="innerForm">
                   <label title="{{field.label}}"><span class="redColor mandatoryIndicator" ng-show="field.mandatory">*</span>{{field.label}}</label>
                   <span class="vtinput-prepend">
                     <input class="form-control" type="text" ng-model="field.fieldValue" date-picker name="fieldValue" ng-required="field.mandatory" />
-                    <span class="vtinput-addon"><i class="fa fa-calendar fa-2x"></i></span>
+                    <span class="vtinput-addon"><i class="fa fa-calendar"></i></span>
                   </span>
                   <span class="validationtext" ng-show="innerForm.$dirty && innerForm.fieldValue.$error.required">
                     {{field.label}} is required
@@ -241,7 +250,7 @@
                       <label title="{{field.label}}"><span class="redColor mandatoryIndicator" ng-show="field.mandatory">*</span>{{field.label}}</label>
                       <span class="vtinput-prepend">
                         <input class="form-control" type="text" ng-model="field.fieldValue" birthday-date-picker name="fieldValue" ng-required="field.mandatory" />
-                        <span class="vtinput-addon"><i class="fa fa-calendar fa-2x"></i></span>
+                        <span class="vtinput-addon"><i class="fa fa-calendar"></i></span>
                       </span>
                       <span class="validationtext" ng-show="innerForm.$dirty && innerForm.fieldValue.$error.required">
                         {{field.label}} is required
@@ -253,7 +262,7 @@
                       <label title="{{field.label}}"><span class="redColor mandatoryIndicator" ng-show="field.mandatory">*</span>{{field.label}}</label>
                       <span class="vtinput-prepend">
                         <input class="form-control" type="text" ng-model="field.fieldValue" date-picker name="fieldValue" ng-required="field.mandatory" />
-                        <span class="vtinput-addon"><i class="fa fa-calendar fa-2x"></i></span>
+                        <span class="vtinput-addon"><i class="fa fa-calendar"></i></span>
                       </span>
                       <span class="validationtext" ng-show="innerForm.$dirty && innerForm.fieldValue.$error.required">
                         {{field.label}} is required
@@ -435,7 +444,7 @@
               <i class="fa fa-dashboard fa-2x"></i> <span class="moduleName timeline clearfix"> Timeline </span> <i class="fa fa-angle-right floatRight"></i>
             </a>
             <a href="#/events" ng-show="isModuleActive('Events')" ng-class="getTabMenuClass('activities')" class="list-group-item text-center" title="Activities">
-              <i class="fa fa-calendar fa-2x"></i> <span class="moduleName activities clearfix"> Activities </span> <i class="fa fa-angle-right floatRight"></i>
+              <i class="fa fa-calendar"></i> <span class="moduleName activities clearfix"> Activities </span> <i class="fa fa-angle-right floatRight"></i>
             </a>
             <a href="#/emails" ng-show="isModuleActive('Emails')" ng-class="getTabMenuClass('emails')" class="list-group-item text-center" title="Emails" style="display:none">
               <i class="vicon-emails"></i><span class="moduleName clearfix"> Emails </span> <i class="fa fa-angle-right floatRight"></i>
